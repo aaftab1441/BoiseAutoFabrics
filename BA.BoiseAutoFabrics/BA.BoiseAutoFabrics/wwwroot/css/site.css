@@ -1,0 +1,420 @@
+﻿
+
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'american';
+}
+
+p {
+    font-family: 'Abel', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+.p-90 {
+    padding: 0px 90px;
+}
+
+.p-120 {
+    padding: 120px;
+}
+
+.p-150 {
+    padding: 150px;
+}
+
+.p-50 {
+    padding: 50px;
+}
+
+.flex-1 {
+    flex: 1;
+}
+
+.m-t-80 {
+    margin-top: 80px;
+}
+
+.p-y-80 {
+    padding: 0px 80px;
+}
+
+@font-face {
+    font-family: 'american';
+    src: url('../fonts/american_captain.woff2') format('woff2'), url('../fonts/american_captain.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 999;
+}
+
+body::before {
+    content: '';
+    position: absolute;
+    background-color: #214e92;
+    top: 0;
+    width: 33%;
+    left: 0;
+    height: 100vh;
+    z-index: -1;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    background-color
+}
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+    .nav-menu li {
+        text-transform: uppercase;
+        font-size: 28px;
+        font-weight: 400;
+        padding-left: 15px;
+        font-family: 'american';
+    }
+
+}
+
+.nav-menu {
+    color: #f9c613;
+}
+
+    .nav-menu li a {
+        color: #000 !important;
+    }
+
+        .nav-menu li a:hover {
+            text-decoration: none;
+        }
+
+.navbar-brand img {
+    width: 130px;
+}
+
+.navbar-toggler {
+    background-color: #f9c713 !important;
+}
+
+
+
+.home-wrapper {
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.home-wrapper-btn {
+    background-color: #f9c613;
+    padding: 10px 58px;
+    font-size: 30px;
+    text-transform: uppercase;
+    color: #000;
+    font-family: 'american';
+    display: inline-block;
+    transition: all 0.4s ease;
+}
+
+    .home-wrapper-btn:hover {
+        text-decoration: none;
+    }
+
+.wrapper-width {
+    max-width: 1500px !important;
+}
+
+.carousel-inner::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: url(../images/image-grid.png);
+    z-index: 1;
+    width: 150px;
+    height: 100px;
+}
+
+.wrapper-grid::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../images/image-grid.png);
+    z-index: 1;
+    width: 100px;
+    height: 100px;
+}
+
+.home-wrapper-about::after {
+    content: 'About';
+    position: absolute;
+    top: -149px;
+    left: 70%;
+    font-size: 180px;
+    font-family: american;
+    color: #eeeeee;
+    z-index: -55;
+}
+
+.home-wrapper-contact::after {
+    content: 'Contact';
+    position: absolute;
+    top: -149px;
+    left: 70%;
+    font-size: 180px;
+    font-family: american;
+    color: #eeeeee;
+    z-index: -55;
+}
+
+
+.wrapper-head {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.wrapper-content {
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+    .wrapper-content h1 {
+        font-size: 72px;
+        line-height: 1;
+    }
+
+    .wrapper-content p {
+        font-size: 22px;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        padding: 5px 0px;
+    }
+
+.about-content {
+    max-height: 400px;
+    overflow: auto;
+    padding: 20px;
+}
+
+    .about-content::-webkit-scrollbar {
+        width: 12px;
+    }
+
+    .about-content::-webkit-scrollbar-track {
+        background: transparent;
+        box-shadow: none;
+    }
+
+    .about-content::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        background: #f9c713;
+        box-shadow: none;
+    }
+
+.form-design {
+    display: block;
+    width: 90%;
+    padding: .375rem .75rem;
+    border: none;
+    border-bottom: 1px solid #000;
+    font-size: 18px;
+    background-color: transparent;
+}
+
+
+.carousel .item {
+    color: #999;
+    font-size: 14px;
+    text-align: center;
+    overflow: hidden;
+    min-height: 290px;
+}
+
+.img-box {
+    padding: 30px;
+}
+
+    .img-box img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+
+.carousel .testimonial {
+    padding: 30px 0 10px;
+}
+
+.carousel .overview {
+    font-style: italic;
+}
+
+    .carousel .overview b {
+        text-transform: uppercase;
+        color: #7AA641;
+    }
+
+.carousel .carousel-control {
+    width: 40px;
+    height: 40px;
+    margin-top: -20px;
+    top: 50%;
+    background: none;
+}
+
+.carousel-control i {
+    font-size: 68px;
+    line-height: 42px;
+    position: absolute;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0.8);
+    text-shadow: 0 3px 3px #e6e6e6, 0 0 0 #000;
+}
+
+.carousel .carousel-indicators {
+    bottom: -50px;
+}
+
+.carousel-indicators li {
+    background: transparent;
+    width: 12px;
+    height: 12px;
+    border: 3px solid #f9c613;
+    border-radius: 50%;
+}
+
+    .carousel-indicators li.active {
+        background: #f9c613
+    }
+
+
+
+
+
+
+
+@media only screen and (max-width: 990px) {
+    header {
+        position: relative;
+    }
+
+    .wrapper-content {
+        max-width: 100%;
+    }
+
+    body {
+        height: 30vh;
+    }
+
+    .home-wrapper-btn {
+        width: 100%;
+        text-align: center
+    }
+
+    .home-wrapper-contact::after {
+        display: none;
+    }
+
+    .home-wrapper-about::after {
+        display: none;
+    }
+
+    .about-content {
+        padding: 0px;
+        max-height: inherit;
+    }
+
+    body:before {
+        height: 35vh;
+        width: 41%
+    }
+}
+
+
+@media only screen and (max-width: 768px) {
+
+    .wrapper-content {
+        max-width: 100%;
+        margin: 30px;
+    }
+
+    .home-wrapper-contact::after {
+        display: none;
+    }
+
+    form {
+        padding-top: 25px;
+    }
+
+    .navbar-brand img {
+        width: 100px;
+    }
+
+    .home-wrapper {
+        align-items: baseline;
+    }
+
+    .carousel-indicators {
+        display: none;
+    }
+
+    .home-wrapper {
+        height: auto;
+        min-height: auto
+    }
+
+    .wrapper-grid::before {
+        top: auto;
+        bottom: 0px;
+    }
+
+    .nav-menu {
+        align-items: flex-end
+    }
+}
+
+@media only screen and (max-width: 500px) {
+
+    .wrapper-content {
+        max-width: 100%;
+    }
+
+    .home-wrapper-contact::after {
+        display: none;
+    }
+
+    .wrapper-content h1 {
+        font-size: 60px;
+    }
+
+    .carousel-inner::before {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+
+@media only screen and (max-width: 480px) {
+}
+
+.secondary-items {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 0;
+    width: 0;
+    z-index: -1;
+}

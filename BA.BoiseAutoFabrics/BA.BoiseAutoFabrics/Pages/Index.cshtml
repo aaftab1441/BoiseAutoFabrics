@@ -1,0 +1,56 @@
+﻿@page
+@model IndexModel
+@using Microsoft.Extensions.Options
+@using reCAPTCHA.AspNetCore
+@inject IOptions<RecaptchaSettings> RecaptchaSettings
+@{
+    ViewData["Title"] = "Home";
+}
+<div class="container-fluid home-wrapper">
+    <div class="container wrapper-width">
+        <div class="row">
+            <div class="col-md-12 col-lg-7">
+                <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                    <!--header ends here -->
+                    <!-- Carousel indicators -->
+                    <ol class="carousel-indicators">
+                        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#myCarousel" data-slide-to="1"></li>
+                        <li data-target="#myCarousel" data-slide-to="2"></li>
+                        <li data-target="#myCarousel" data-slide-to="3"></li>
+                        <li data-target="#myCarousel" data-slide-to="4"></li>
+                    </ol>
+                    <!-- Wrapper for carousel items -->
+                    <div class="carousel-inner">
+                        <div class="item carousel-item active">
+                            <div class="img-fluid img-box"><img src="images/detroitbook.jpg" alt=""></div>
+                        </div>
+                        <div class="item carousel-item">
+                            <div class="img-fluid img-box"><img src="images/fabrics.jpg" alt=""></div>
+                        </div>
+                        <div class="item carousel-item">
+                            <div class="img-fluid img-box"><img src="images/leather.jpg" alt=""></div>
+                        </div>
+                        <div class="item carousel-item">
+                            <div class="img-fluid img-box"><img src="images/detroitbook2.jpg" alt=""></div>
+                        </div>
+                        <div class="item carousel-item">
+                            <div class="img-fluid img-box"><img src="images/thread.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-12 col-lg-5 d-flex align-items-center">
+                <div class="wrapper-content">
+                    <h1>Unique, Hard to Find Auto Fabrics</h1>
+                    <p>Since 1965, Terry or Jack ordered extra material every time he upholstered a car... just in case.</p>
+                    <p>Now he has a vast collection of original auto fabrics, leathers and vinyl you can't find anywhere else.</p>
+                    <p>BoiseAutoFabrics.com is perfect place to find out of stock, one of a kind, and retired prints for you next project!</p>
+                    <div class="mt-5">
+                        <div><a class="home-wrapper-btn" href="/about">LEARN MORE</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

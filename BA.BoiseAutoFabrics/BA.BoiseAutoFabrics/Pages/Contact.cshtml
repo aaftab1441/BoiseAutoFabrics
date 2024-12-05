@@ -1,0 +1,55 @@
+﻿@page "/contact"
+@model BA.BoiseAutoFabrics.Pages.ContactModel
+@using reCAPTCHA.AspNetCore
+@using reCAPTCHA.AspNetCore.Versions;
+@using Microsoft.Extensions.Options
+@inject IOptions<RecaptchaSettings> RecaptchaSettings
+@{
+    ViewData["Title"] = "Contact";
+}
+<div class="container-fluid home-wrapper">
+    <div class="container wrapper-width">
+        <div class="row home-wrapper">
+            <div class="col-md-12 col-lg-7">
+                <div class="img-fluid img-box wrapper-grid home-wrapper-contact"><img src="images/contact-image.jpg" width="100%" alt=""></div>
+
+            </div>
+            <div class="col-md-12 col-lg-5">
+                <div class="wrapper-content mt-sm-2 mt-5">
+                    @using (@Html.BeginForm(null, null, FormMethod.Post, new { id = "contact-us", @class = "contact" }))
+                    {
+                        <div class="form-group">
+                            <input type="text" asp-for="contactUsModel.Name" class="form-design" id="email" placeholder="Full Name">
+                            <span asp-validation-for="contactUsModel.Name"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="password" asp-for="contactUsModel.Phone" class="form-design" id="pwd" placeholder="Phone No">
+                            <span asp-validation-for="contactUsModel.Phone"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" asp-for="contactUsModel.Email" class="form-design" id="email" placeholder="Email Address">
+                            <span asp-validation-for="contactUsModel.Email"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" asp-for="contactUsModel.DetroitNumber" class="form-design" id="pwd" placeholder="Detroit No">
+                            <span asp-validation-for="contactUsModel.DetroitNumber"></span>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" asp-for="contactUsModel.Comments" class="form-design mt-5" id="email" placeholder="Message">
+                        </div>
+                        <div class="m-t-80">
+                            @(Html.Recaptcha<RecaptchaV3HiddenInput>(RecaptchaSettings.Value))
+                            <div><input id="recaptcha" type="submit" value="Submit" class="home-wrapper-btn"></div>
+                        </div>
+                        <div class="secondary-items">
+                            <label for="Name">Name</label><input name="Name" type="text" autocomplete="off" />
+                            <label for="Email">Email</label><input name="Email" type="text" autocomplete="off" />
+                            <label for="Phone">Phone</label><input name="Phone" type="text" autocomplete="off" />
+                            <label for="Comments">Comments</label><textarea name="Comments" autocomplete="off"></textarea>
+                        </div>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
