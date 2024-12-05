@@ -37,8 +37,8 @@ namespace BA.BoiseAutoFabrics
             // Or configure recaptcha via options
             services.AddRecaptcha(options =>
             {
-                options.SecretKey = "6LfnL8QZAAAAAFDibZoJOnrE2s8izzN4GQIhqQxt";
-                options.SiteKey = "6LfnL8QZAAAAAPvWrtlEo8Z3a1LvKGjyIiCocRtt";
+                options.SecretKey = "secret key";
+                options.SiteKey = "site key";
             });
         }
 
